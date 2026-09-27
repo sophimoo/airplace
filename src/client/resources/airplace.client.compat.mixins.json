@@ -1,0 +1,11 @@
+{
+	"required": false,
+	"package": "com.sophimoo.airplace.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"NonTerrainBlockRenderContextMixin"
+	],
+	"injectors": {
+		"defaultRequire": 0
+	}
+}

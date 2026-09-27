@@ -1,0 +1,19 @@
+{
+	"key.category.airplace.main": "AirPlace",
+	"key.airplace.scrollmodifier": "Scroll Range",
+	"key.airplace.toggle": "Toggle AirPlace",
+	"text.autoconfig.airplace.title": "AirPlace",
+	"text.autoconfig.airplace.option.enabled": "Enabled",
+	"text.autoconfig.airplace.option.range": "Range",
+	"text.autoconfig.airplace.option.range.@Tooltip": "Placement range from 0 to 6 blocks.",
+	"text.autoconfig.airplace.option.blockOutline": "Block Outline",
+	"text.autoconfig.airplace.option.blockOutline.@Tooltip": "Render an outline at the target position.",
+	"text.autoconfig.airplace.option.ghostBlock": "Ghost Block",
+	"text.autoconfig.airplace.option.ghostBlock.@Tooltip": "Render the block that would be placed.",
+	"text.autoconfig.airplace.option.ghostOpacity": "Opacity",
+	"text.autoconfig.airplace.option.ghostOpacity.@Tooltip": "Opacity of the ghost block preview.",
+	"text.autoconfig.airplace.option.ghostLerp": "Smooth Selection",
+	"text.autoconfig.airplace.option.ghostLerp.@Tooltip": "Glide the ghost between target positions.",
+	"text.autoconfig.airplace.option.ghostLerpSpeed": "Selection Speed",
+	"text.autoconfig.airplace.option.ghostLerpSpeed.@Tooltip": "How quickly the ghost catches up to the target."
+}

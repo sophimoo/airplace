@@ -1,31 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "airplace",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "AirPlace",
+	"description": "Place blocks in mid-air: aim, hold the bind, scroll to adjust the range. Cloth Config screen included.",
 	"authors": [
-		"Me!"
+		"Sophie"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"contact": {},
+	"license": "GPL-3.0-or-later",
+	"icon": "assets/airplace/icon.png",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
 		"client": [
-			"com.example.client.ExampleModClient"
+			"com.sophimoo.airplace.AirPlaceClient"
+		],
+		"modmenu": [
+			"com.sophimoo.airplace.AirPlaceModMenu"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "airplace.client.mixins.json",
+			"environment": "client"
+		},
+		{
+			"config": "airplace.client.compat.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -33,6 +33,7 @@
 		"fabricloader": ">=0.19.5",
 		"minecraft": "~26.3",
 		"java": ">=25",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"cloth-config": "*"
 	}
 }

@@ -1,0 +1,18 @@
+{
+	"required": true,
+	"package": "com.sophimoo.airplace.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"BlockItemAccessor",
+		"MinecraftMixin",
+		"MouseHandlerMixin",
+		"AltModelBlockRendererMixin",
+		"SubmitNodeCollectionMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
