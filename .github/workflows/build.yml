@@ -6,6 +6,9 @@
 name: build
 on: [pull_request, push]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -25,8 +28,12 @@ jobs:
         run: sed -i "s/^version=.*/&+dev.$(git rev-parse --short HEAD)/" gradle.properties
       - name: build
         run: ./gradlew build
-      - name: capture dev build artifacts
-        uses: actions/upload-artifact@v7
+      - name: release dev build
+        if: github.event_name == 'push'
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          name: Dev-Build
-          path: build/libs/
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          automatic_release_tag: snapshot
+          prerelease: true
+          title: Dev Build
+          files: build/libs/*.jar
