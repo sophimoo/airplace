@@ -24,8 +24,6 @@ jobs:
           distribution: 'microsoft'
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
-      - name: set dev version
-        run: sed -i "s/^version=.*/&+dev.$(git rev-parse --short HEAD)/" gradle.properties
       - name: build
         run: ./gradlew build
       - name: release dev build
